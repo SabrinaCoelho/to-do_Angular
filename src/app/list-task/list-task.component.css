@@ -1,0 +1,24 @@
+section{
+    width: 25rem;
+}
+input[type="text"]{
+    border: none;
+    outline-color: #F15BB5;
+    color: #6C757D;
+    padding: 5px;
+    font-size: 1rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 80%;
+}
+input[type="checkbox"]{
+    display: none;
+}
+.concluido{
+    text-decoration: line-through;
+}
+.item-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px 0;
+}

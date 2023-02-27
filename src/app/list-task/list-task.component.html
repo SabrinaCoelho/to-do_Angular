@@ -1,0 +1,21 @@
+<section *ngIf="tasks.length">
+    <div *ngFor="let item of tasks; let i = index" class="item-wrapper"> 
+        <input type="checkbox" name="" id="c{{i}}" (change)="setConcluido(i)">
+        <label for="c{{i}}">
+            <span class="material-symbols-outlined">
+                done
+            </span>
+        </label>
+        <input [ngClass]="{concluido: item.concluido}" type="text" #valor name="" value="{{item.nome}}" id="{{i}}" (change)="editaTask(i, valor)">
+        <label for="{{i}}">
+            <span class="material-symbols-outlined">
+                edit
+            </span>
+        </label>
+        <label for="" (click)="removerTask(i)">
+            <span class="material-symbols-outlined">
+                delete
+            </span>
+        </label>
+    </div>
+</section>

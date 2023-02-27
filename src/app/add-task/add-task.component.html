@@ -1,0 +1,16 @@
+<div class="field-wrapper">
+    <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+        <input type="text" formControlName="novaTask" placeholder="Digite aqui sua próxima tarefa!">
+    </form>
+    <!-- <div style="margin-top: 20px;">
+        <div>
+            Form's details
+        </div>
+        <pre>
+            Form válido: {{ taskForm.valid }}
+        </pre>
+        <pre>
+            Form values: <br> {{ taskForm.value | json}}
+        </pre>
+    </div> -->
+</div>
