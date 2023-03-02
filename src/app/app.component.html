@@ -6,8 +6,9 @@
     <div class="content-wrapper">
       <app-list-task [tasks]="tasks" *ngIf="tasks && tasks.length; else placeholder"></app-list-task>
       <ng-template #placeholder>
-        <img src="assets\todo_notes.png" width="400px" alt="bloco de notas">
+        <img src="assets\todo_notes.png" alt="bloco de notas">
       </ng-template>
     </div>
     <app-add-task></app-add-task>
   </div>
+</div>

@@ -29,7 +29,7 @@ export class ToDoService {
 
   private tasks: Task[] = [];
 
-  emiteNovaTask = new EventEmitter<string>();
+  emiteNovaTask = new EventEmitter<any>();
 
   constructor() { }
 
@@ -56,7 +56,7 @@ export class ToDoService {
   updateLocalStorage(){
     const tasksStr = JSON.stringify(this.tasks);
     localStorage.setItem("tasks", tasksStr);
-    this.emiteNovaTask.emit("nyo-ho");
+    this.emiteNovaTask.emit();
   }
   setConcluido(idTask: number){
     this.tasks = this.getLocalStorage();
